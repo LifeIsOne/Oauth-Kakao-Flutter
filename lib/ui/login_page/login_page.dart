@@ -9,13 +9,37 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("카카오 로그인"),
+        title: Text("Login Page"),
       ),
-      body: ElevatedButton(
-          child: Text("카카오 로그인"),
-          onPressed: () async {
-            kakaoLogin();
-          }),
+      body: Center(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 50),
+            GestureDetector(
+              child: Image.asset(
+                'assets/kakao_button.png',
+                width: 200,
+                height: 50,
+              ),
+              onTap: () async {
+                kakaoLogin();
+              },
+            ),
+            SizedBox(height: 50),
+            GestureDetector(
+              child: Image.asset(
+                'assets/btnG_완성형.png',
+                width: 200,
+                height: 50,
+              ),
+              onTap: () async {
+                kakaoLogin();
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 
